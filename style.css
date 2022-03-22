@@ -24,13 +24,17 @@ body{
     cursor: pointer;
 }
 
+.navbar > ul > li > h3{
+    margin: 0;
+    padding: 0;
+    transform: rotate(-15deg);
+}
+
 .navbar > ul{
     list-style-type: none;
     margin: 0;
     padding: 0;
 }
-
-
 
 .footer{
     padding: 0 15% 0 15%;
@@ -39,17 +43,16 @@ body{
 
 .samples{
     background-color: black;
-    padding: 20px 15% 20px 15%;
+    
     color:white;
 }
 
-
 .cd{
-    padding: 20px 15% 20px 15%;
+    
 }
 
 .info{
-    padding: 20px 15% 20px 15%;
+    
 }
 
 .important{
@@ -85,5 +88,17 @@ body{
 
 .cds{
     display: flex;
-    
+}
+
+.padding-sections{
+    padding: 20px 15% 20px 15%;
+}
+
+@media only screen and (max-width:600px) {
+    .padding-sections{
+        padding: 20px 10px 20px 10px;
+    }
+    .navbar{
+        padding: 0 5px 0 5px;
+    }
 }
