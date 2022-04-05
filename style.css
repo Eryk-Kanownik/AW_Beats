@@ -30,20 +30,29 @@ body{
     transform: rotate(-15deg);
 }
 
+.navbar > ul > li > a{
+    color: white;
+    text-decoration: none;
+    border-bottom: solid 2px rgba(255, 255, 255, 0);
+}
+
+.navbar > ul > li > a:hover{
+    color: white;
+    text-decoration: none;
+    border-bottom: solid 2px rgb(255, 255, 255);
+    transition-duration: 0.2s;
+}
+
 .navbar > ul{
     list-style-type: none;
     margin: 0;
     padding: 0;
 }
 
-.footer{
-    padding: 0 15% 0 15%;
-    background-color: rgb(199, 199, 199);
-}
+
 
 .samples{
     background-color: black;
-    
     color:white;
 }
 
@@ -71,19 +80,28 @@ body{
 }
 
 .cd-card{
-    width: 240px;
+    min-width: 240px;
     height: 320px;
-    background-color: white;
+    background-image: url("https://picsum.photos/240/320");
     margin-right: 5px;
     display: flex;
     align-items:flex-end;
-    padding:5px;
+    cursor: pointer;
+    margin-bottom: 5px;
 }
+.cd-card > img{
 
+}
 .cd-card > .title > h2{
     color:black;
-    padding: 0;
+    padding: 5px;
+    
     margin: 0;
+    transition: 0.2s;
+}
+
+.cd-card:hover > .title > h2 {
+    font-size: 30px;
 }
 
 .cds{
@@ -101,4 +119,80 @@ body{
     .navbar{
         padding: 0 5px 0 5px;
     }
+    .cds{
+        overflow-x: scroll;
+    }
+    .shop{
+        grid-template-columns: 50% 50% !important;
+    }
+}
+
+.footer > h1{
+    padding: 0;
+    margin: 0;
+    color: white;
+}
+
+.footer{
+    background-color: black;
+}
+
+.cd-card-more{
+    background-color: white;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 240px;
+    height: 320px;
+    transition-duration: 0.2s;
+    cursor: pointer;
+}
+
+.cd-card-more:hover{
+    font-size: 20px;
+}
+/* width */
+::-webkit-scrollbar {
+    margin: 5px;
+    width: 5px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: grey;
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: rgb(29, 29, 29); 
+
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #161616; 
+  }
+
+.shop{
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-rows: auto;
+}
+
+.shop-card{
+    box-shadow: 0 0 1px;
+    height: 300px;
+    margin: 5px;
+    display: grid;
+    grid-template-rows:80% 10% 10% ;
+    text-align: center;
+    border-radius: 3px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.shop-card:hover{
+    box-shadow: 0 0 3px;
+    transition-duration: 0.2s;
 }
